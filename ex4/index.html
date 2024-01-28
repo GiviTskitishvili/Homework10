@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+    <title>Display items of a dropdown list</title>
+  </head>
+  <body>
+    <form>
+      Select your favorite Color :
+      <select id="mySelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>White</option>
+      </select>
+      <input
+        type="button"
+        onclick="myFunction()"
+        value="Output selected color"
+      />
+    </form>
+
+    <script>
+      function myFunction() {
+        var selectElement = document.getElementById("mySelect");
+
+        var selectedColor =
+          selectElement.options[selectElement.selectedIndex].text;
+
+        alert("Selected color: " + selectedColor);
+      }
+    </script>
+  </body>
+</html>

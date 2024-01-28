@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Size : height and width</title>
+  </head>
+  <body onload="getSize()" onresize="getSize()">
+    <div id="wh">
+      <h2 class="result"></h2>
+    </div>
+    <script>
+      function getSize() {
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+
+        document.querySelector(".result").textContent =
+          "Width: " + width + "px, Height: " + height + "px";
+      }
+
+      getSize();
+    </script>
+  </body>
+</html>

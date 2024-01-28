@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 class="result"></h2>
+    <form action="" method="post" id="MyForm">
+      <label for="length">სიგრძე</label>
+      <input type="text" name="length" id="length" required />
+      <label for="width">სიგანე</label>
+      <input type="text" name="width" id="width" />
+      <input type="submit" value="Calculate" id="submit" />
+    </form>
+    <script>
+      document
+        .getElementById("MyForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var length = parseFloat(document.getElementById("length").value);
+          var width = parseFloat(document.getElementById("width").value);
+
+          var area = length * width;
+
+          document.querySelector(".result").textContent = "Area: " + area;
+        });
+    </script>
+  </body>
+</html>
